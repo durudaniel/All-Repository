@@ -1,0 +1,55 @@
+.plane {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.buy {
+  font-size: 1rem;
+  font-weight: 550;
+  color: #fff;
+  background-color: #333;
+  border: 0.1px #333 solid;
+  border-radius: 2.5px;
+  padding: 0.7rem 1.5rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+
+  /*transform: translateX(-50%);*/
+  transition: all 0.01s;
+  cursor: pointer;
+}
+.buy:hover {
+  color: #fff;
+  background-color: #413d3d;
+}
+
+.buy:active {
+  transform: translate(0.2%, 0.5px);
+  background-color: #333;
+}
+
+.answer {
+  font-size: 1rem;
+  font-weight: 550;
+  color: #fff;
+  background-color: #333;
+  border: 0.1px #333 solid;
+  border-radius: 2.5px;
+  padding: 0.7rem 1.5rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+
+  /*transform: translateX(-50%);*/
+  transition: all 0.01s;
+  cursor: pointer;
+}
+.answer:hover {
+  color: #fff;
+  background-color: #413d3d;
+}
+
+.answer:active {
+  transform: translate(0.2%, 0.5px);
+  background-color: #333;
+}

@@ -1,0 +1,133 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+
+  /**********************
+    it does not work on safari
+  
+    scroll-behavior: smooth;
+    ********************/
+}
+body {
+  color: #343a40;
+  text-align: center;
+  overflow-x: hidden;
+}
+.heading-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+}
+.btn:link,
+.btn:visited {
+  font-size: 2rem;
+  display: inline-block;
+  background-color: #343a40;
+  color: #fff;
+  text-decoration: none;
+}
+
+.button-again:link,
+.button-again:visited {
+  padding: 1rem 2rem;
+}
+
+.button-again:hover,
+.button-again:active {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  color: #495057;
+  border: 1px solid #495057;
+  cursor: pointer;
+}
+
+.heading-text {
+  font-size: 1.8rem;
+  color: #343a40;
+}
+.section-guess {
+  margin-bottom: 5rem;
+}
+
+.guess-my-number {
+  font-size: 6rem;
+  font-weight: 600;
+}
+
+.scores {
+  display: inline-block;
+  font-size: 5rem;
+  font-weight: 500;
+  padding: 1.2rem 1.5rem;
+  background-color: #343a40;
+  color: #fff;
+  width: 10rem;
+  margin-top: 2rem;
+  text-decoration: none;
+}
+
+.inputs-print {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  column-gap: 8rem;
+  margin-right: 50rem;
+}
+.input-checking {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  margin-left: 50rem;
+}
+.guess {
+  width: 10rem;
+  height: 5rem;
+}
+.btn-check {
+  width: 10rem;
+  font-size: 1.8rem;
+  background-color: #343a40;
+  color: #fff;
+  padding: 1.2rem 1.2rem;
+  border: none;
+}
+
+.btn-check:hover {
+  background-color: #fff;
+  border: #343a40 1px solid;
+  color: #495057;
+  cursor: pointer;
+}
+.btn-check:active {
+  border: #343a40 2px solid;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.right {
+  font-size: 2rem;
+  font-weight: 500;
+  width: 16rem;
+
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+}
+.message {
+  background-color: #495057;
+  color: #fff;
+  margin-bottom: 3rem;
+}
+
+.label-score {
+  margin-right: 2rem;
+}
