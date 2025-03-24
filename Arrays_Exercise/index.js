@@ -101,8 +101,8 @@ currencies.forEach(function (value, key, map) {
 // SETS
 const currenciesUnique = new Set(["USD", "GBP", "USD", "EUR", "EUR"]);
 //console.log(currenciesUnique);
-currenciesUnique.forEach(function (value, key, map) {
-  //console.log(`${key}: ${value}`);
+currenciesUnique.forEach(function (value, _, map) {
+  //console.log(`${value}: ${value}`);
   //console.log(map);
 });
 
@@ -388,6 +388,9 @@ for (const acc of accounts) {
   //console.log(acc);
   getAccountOwner2.push(acc.owner === "Paul Chukwuebuka");
 }
+
+const arrTofind = [1, 2, 3, 4, 5];
+
 //console.log(getAccountOwner);
 
 /******************* THE FINDLAST AND THE FINDLASTINDEX METHOD ***********************/
@@ -400,6 +403,7 @@ const lastWithdrawal = movements2.findLast((mov) => mov < 0);
 const latestlargeMovementsIndex = movements2.findLastIndex(
   (mov) => Math.abs(mov) > 100
 );
+
 //console.log(latestlargeMovementsIndex);
 /*console.log(
   `Your lastest large movement was ${
@@ -464,7 +468,13 @@ const owners = ["gregor", "Gregor", "michael", "gregoa", "willy"];
 // sort in ascending order
 const sortAscendingMov = movements2.sort((a, b) => a - b);
 //console.log(sortAscendingMov);
-
+/*
+const sortData = [{
+  name: "jskjskjsj",
+  age: 13,
+  
+}]
+  sort age using ascending and descending order
 // sort in descending order
 const sortDescendingMov = movements2.sort((a, b) => b - a);
 //console.log(sortDescendingMov);
@@ -587,45 +597,3 @@ const convertTitleCase = function (title) {
 //console.log(convertTitleCase("this is a nice title"));
 //console.log(convertTitleCase("this a LONG title but not too long"));
 //console.log(convertTitleCase("but here is another title with an EXAMPLE"));
-
-/************  CHECKING AND CONVERTING NUMBERS IN JAVASCRIPT ************/
-
-console.log(0.1 + 0.2);
-console.log(parseInt("23ls"));
-
-/*************** MATH AND ROUNDING ******************/
-
-console.log(Math.trunc(Math.random() * 6) + 1);
-
-const randomInt = (min, max) =>
-  Math.trunc(Math.random() * (max - min) + 1 + min);
-
-console.log(randomInt(10, 20));
-//randomInt(0, 3);
-
-/************** THE REMAINDER OPERATOR ****************/
-console.log(10 % 4); // 4 * 2 = 8 + 2
-console.log(10 / 4);
-
-// return boolean if it's an even number or NOT
-const isEven = (num) => num % 2 === 0;
-console.log(isEven(10));
-console.log(isEven(100));
-console.log(isEven(245));
-console.log(isEven(15));
-
-/************** NUMERIC SEPERATOR *************/
-
-const diameter = 1507895757;
-
-const numses = 23445n;
-console.log(typeof numses === "bigint");
-
-/*************** DATE AND TIME IMPLIMENTATION *****************/
-console.log(new Date());
-
-let getDate = new Date("Dec 20 2025 00:47:01");
-console.log(getDate);
-
-getDate = new Date("dec 15 2025");
-console.log(getDate);
