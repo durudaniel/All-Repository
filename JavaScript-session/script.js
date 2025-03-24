@@ -28,3 +28,46 @@ represented as an object with properties like title, author, and isAvailable. Us
 // a function that allows users to borrow and return book
 // track all available books and all borrowed books
 /*const bookLibrary = [];*/
+
+/* ARRAY SORTING EXERCISE */
+
+const sortData = [
+  { name: "wilson", age: 13 },
+  { name: "william", age: 45 },
+  { name: "kassie", age: 20 },
+  { name: "katie", age: 20 },
+  { name: "michael", age: 17 },
+];
+// sorting by name
+
+const sortName = function (arr) {
+  //const sortArr = arr.map((element) => element);
+  const sortArr = arr
+    .map((element) => element)
+    .sort((a, b) => (a.name > b.name ? 1 : -1));
+  return sortArr;
+};
+
+console.log(sortName(sortData));
+
+// sorting by age (ASCENDING ORDER)
+
+const sortAgeAscendingOrder = function (arr) {
+  const sortArr = arr.map((element) => element).sort((a, b) => a.age - b.age);
+
+  return sortArr;
+};
+
+console.log(sortAgeAscendingOrder(sortData));
+
+// sort age in a (descending order)
+
+const sortAgeDescendingOrder = function (arr) {
+  const sortArr = arr
+    .map((element) => element)
+    .sort((a, b) => (b.age > a.age ? 1 : -1));
+
+  return sortArr;
+};
+
+console.log(sortAgeDescendingOrder(sortData));

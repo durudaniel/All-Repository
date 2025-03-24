@@ -597,3 +597,6 @@ const convertTitleCase = function (title) {
 //console.log(convertTitleCase("this is a nice title"));
 //console.log(convertTitleCase("this a LONG title but not too long"));
 //console.log(convertTitleCase("but here is another title with an EXAMPLE"));
+
+const int = 2;
+console.log(int);
