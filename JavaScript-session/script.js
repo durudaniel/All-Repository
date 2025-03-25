@@ -29,8 +29,81 @@ represented as an object with properties like title, author, and isAvailable. Us
 // track all available books and all borrowed books
 /*const bookLibrary = [];*/
 
-/* ARRAY SORTING EXERCISE */
+// 1. add new book to the library
 
+const library = [];
+const booksCollection = function (title, author, status) {
+  return library.push({ title, author, status });
+};
+booksCollection("A Way Home", "Obi Francis", "unavailable");
+booksCollection("Commitments", "Mark Davis", "available");
+booksCollection("Thousands", "Williams", "available");
+booksCollection("Forever Gold", "Angel Betty", "available");
+console.log(library);
+
+// 2. track available books and unavailable books
+/*
+const trackAvailableBooks = library.filter(
+  (book) => book.status === "available"
+);
+
+console.log(trackAvailableBooks);
+
+const trackunavailableBooks = library.filter(
+  (book) => book.status === "unavailable"
+);
+
+console.log(trackunavailableBooks);
+*/
+const trackAvailableAndUnavailable = Object.groupBy(library, (book) => {
+  if (book.status === "available") return "available books";
+  if (book.status === "unavailable") return "unavailable books";
+});
+console.log(trackAvailableAndUnavailable);
+
+// 3. Allow user to borrow books
+const allowUserToBorrowBook = function (title, firstName, lastName, date) {
+  const borrowBook = library
+    .filter((book) => book.title === title && book.status === "available")
+    .map((book) => {
+      return book.status === "available"
+        ? library.push({
+            ...book,
+            status: "unavailable",
+            user: { firstName, lastName, date },
+          })
+        : `${book.title} has been borrowed`;
+    });
+  return borrowBook;
+};
+console.log("-----------borrow books------------");
+
+console.log(library);
+allowUserToBorrowBook("Commitments", "derek", "muller", new Date());
+
+// 4. Allow user to return book
+const allowUserToReturnBook = function (title, firstName, lastName, date) {
+  const returnBook = library
+    .filter((book) => book?.title === title && book.status === "unavailable")
+    .map((book) => {
+      return book.status === "unavailable"
+        ? library.push({
+            ...book,
+            status: "available",
+            user: { firstName, lastName, date },
+          })
+        : `you can't return book that haven't been borrowed`;
+    });
+
+  return returnBook;
+};
+console.log("------------return books------------");
+console.log(library);
+allowUserToReturnBook("Commitments", "Michael", "Owen", new Date());
+allowUserToReturnBook("A Way Home", "Gnabry", "Peters", new Date());
+
+/* ARRAY SORTING EXERCISE */
+console.log("-------------------------- sorting array-----------------------");
 const sortData = [
   { name: "wilson", age: 13 },
   { name: "william", age: 45 },
