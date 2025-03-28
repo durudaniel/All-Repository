@@ -77,9 +77,18 @@ const allowUserToBorrowBook = function (title, firstName, lastName, date) {
   return borrowBook;
 };
 console.log("-----------borrow books------------");
-
+const date = new Date();
+const getDay = date.getDay();
+const getMonth = date.getMonth();
+const getYear = date.getFullYear();
+const getMin = date.getMinutes();
+const getHour = date.getHours();
+const fullDate = `${getDay}/${`${getMonth + 1}`.padStart(
+  2,
+  0
+)}/${getYear}, ${getHour}:${`${getMin}`.padStart(2, 0)}`;
 console.log(library);
-allowUserToBorrowBook("Commitments", "derek", "muller", new Date());
+allowUserToBorrowBook("Commitments", "derek", "muller", fullDate);
 
 // 4. Allow user to return book
 const allowUserToReturnBook = function (title, firstName, lastName, date) {
@@ -99,8 +108,8 @@ const allowUserToReturnBook = function (title, firstName, lastName, date) {
 };
 console.log("------------return books------------");
 console.log(library);
-allowUserToReturnBook("Commitments", "Michael", "Owen", new Date());
-allowUserToReturnBook("A Way Home", "Gnabry", "Peters", new Date());
+allowUserToReturnBook("Commitments", "Michael", "Owen", fullDate);
+allowUserToReturnBook("A Way Home", "Gnabry", "Peters", fullDate);
 
 /* ARRAY SORTING EXERCISE */
 console.log("-------------------------- sorting array-----------------------");
