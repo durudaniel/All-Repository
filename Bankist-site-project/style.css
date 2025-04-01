@@ -193,7 +193,7 @@ img {
 
 h1 {
   font-size: 5.5rem;
-  line-height: 1.35;
+  line-height: 1.19;
 }
 
 h4 {
@@ -663,12 +663,13 @@ h4 {
 
 /* COOKIE MESSAGE */
 .cookie-message {
-  display: flex;
+  display: grid;
+  grid-template-columns: 6fr 1fr;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   width: 100%;
   background-color: white;
-  color: #bbb;
+  color: #e7d9d9;
   font-size: 1.5rem;
   font-weight: 400;
 }
