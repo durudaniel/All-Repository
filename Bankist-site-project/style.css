@@ -106,7 +106,7 @@ button:focus {
 img {
   transition: filter 0.5s;
 }
-
+/*
 .lazy-img {
   filter: blur(20px);
 }
@@ -259,7 +259,7 @@ h4 {
 .features__icon .svg-icon {
   height: 2.5rem;
   width: 2.5rem;
-  fill: var(--color-primary);
+  color: var(--color-primary);
 }
 
 .features__header {
@@ -458,7 +458,7 @@ h4 {
 
 .dots__dot--active {
   /* background-color: #fff; */
-  background-color: #888;
+  background-color: #777;
   opacity: 1;
 }
 
